@@ -1,0 +1,1274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LibraryDataSet" targetNamespace="http://tempuri.org/LibraryDataSet.xsd" xmlns:mstns="http://tempuri.org/LibraryDataSet.xsd" xmlns="http://tempuri.org/LibraryDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="LibraryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="LibraryConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Library.Properties.Settings.GlobalReference.Default.LibraryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Activity_ReaderTableAdapter" GeneratorDataComponentClassName="Activity_ReaderTableAdapter" Name="Activity_Reader" UserDataComponentName="Activity_ReaderTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.Activity_Reader" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id_reader, Surname, Name, Patronymic, Birthday, Phone FROM dbo.Activity_Reader</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id_reader" DataSetColumn="Id_reader" />
+              <Mapping SourceColumn="Surname" DataSetColumn="Surname" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Patronymic" DataSetColumn="Patronymic" />
+              <Mapping SourceColumn="Birthday" DataSetColumn="Birthday" />
+              <Mapping SourceColumn="Phone" DataSetColumn="Phone" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="COUNT_DEBT_BOOKTableAdapter" GeneratorDataComponentClassName="COUNT_DEBT_BOOKTableAdapter" Name="COUNT_DEBT_BOOK" UserDataComponentName="COUNT_DEBT_BOOKTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.COUNT_DEBT_BOOK" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_READER, ID_BOOK, DAYS FROM dbo.COUNT_DEBT_BOOK</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_READER" DataSetColumn="ID_READER" />
+              <Mapping SourceColumn="ID_BOOK" DataSetColumn="ID_BOOK" />
+              <Mapping SourceColumn="DAYS" DataSetColumn="DAYS" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="COUNT_TITLETableAdapter" GeneratorDataComponentClassName="COUNT_TITLETableAdapter" Name="COUNT_TITLE" UserDataComponentName="COUNT_TITLETableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.COUNT_TITLE" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT NAME, SURNAME, QUANTITY FROM dbo.COUNT_TITLE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NAME" DataSetColumn="NAME" />
+              <Mapping SourceColumn="SURNAME" DataSetColumn="SURNAME" />
+              <Mapping SourceColumn="QUANTITY" DataSetColumn="QUANTITY" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DebtTableAdapter" GeneratorDataComponentClassName="DebtTableAdapter" Name="Debt" UserDataComponentName="DebtTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.Debt" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, TITLE_BOOK, TIME_OF_DEBT, SURNAME, NAME, PATRONYMIC, PHONE FROM dbo.Debt</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="TITLE_BOOK" DataSetColumn="TITLE_BOOK" />
+              <Mapping SourceColumn="TIME_OF_DEBT" DataSetColumn="TIME_OF_DEBT" />
+              <Mapping SourceColumn="SURNAME" DataSetColumn="SURNAME" />
+              <Mapping SourceColumn="NAME" DataSetColumn="NAME" />
+              <Mapping SourceColumn="PATRONYMIC" DataSetColumn="PATRONYMIC" />
+              <Mapping SourceColumn="PHONE" DataSetColumn="PHONE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BOOK_OF_AUTHORTableAdapter" GeneratorDataComponentClassName="BOOK_OF_AUTHORTableAdapter" Name="BOOK_OF_AUTHOR" UserDataComponentName="BOOK_OF_AUTHORTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.BOOK_OF_AUTHOR" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.BOOK_OF_AUTHOR</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@SURNAME" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@NAME" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Title" DataSetColumn="Title" />
+              <Mapping SourceColumn="Year" DataSetColumn="Year" />
+              <Mapping SourceColumn="Count_of_book" DataSetColumn="Count_of_book" />
+              <Mapping SourceColumn="Genre" DataSetColumn="Genre" />
+              <Mapping SourceColumn="Original_language" DataSetColumn="Original_language" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GENRE__OF_BOOKTableAdapter" GeneratorDataComponentClassName="GENRE__OF_BOOKTableAdapter" Name="GENRE__OF_BOOK" UserDataComponentName="GENRE__OF_BOOKTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.GENRE__OF_BOOK" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.GENRE__OF_BOOK</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@GENRE" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id_book" DataSetColumn="Id_book" />
+              <Mapping SourceColumn="Title" DataSetColumn="Title" />
+              <Mapping SourceColumn="Author_Surname" DataSetColumn="Author_Surname" />
+              <Mapping SourceColumn="Author_Name" DataSetColumn="Author_Name" />
+              <Mapping SourceColumn="Author_Patronymic" DataSetColumn="Author_Patronymic" />
+              <Mapping SourceColumn="Year" DataSetColumn="Year" />
+              <Mapping SourceColumn="Count_of_book" DataSetColumn="Count_of_book" />
+              <Mapping SourceColumn="Genre" DataSetColumn="Genre" />
+              <Mapping SourceColumn="Original_language" DataSetColumn="Original_language" />
+              <Mapping SourceColumn="All_count_book_in_library" DataSetColumn="All_count_book_in_library" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LOCATION_OF_BOOKTableAdapter" GeneratorDataComponentClassName="LOCATION_OF_BOOKTableAdapter" Name="LOCATION_OF_BOOK" UserDataComponentName="LOCATION_OF_BOOKTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.LOCATION_OF_BOOK" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.LOCATION_OF_BOOK</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@TITLE_OF_BOOK" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NUMBER_HALL" DataSetColumn="NUMBER_HALL" />
+              <Mapping SourceColumn="POLKA" DataSetColumn="POLKA" />
+              <Mapping SourceColumn="STEND" DataSetColumn="STEND" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ORIGINAL_LANGUAGE__OF_BOOKTableAdapter" GeneratorDataComponentClassName="ORIGINAL_LANGUAGE__OF_BOOKTableAdapter" Name="ORIGINAL_LANGUAGE__OF_BOOK" UserDataComponentName="ORIGINAL_LANGUAGE__OF_BOOKTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.ORIGINAL_LANGUAGE__OF_BOOK" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.ORIGINAL_LANGUAGE__OF_BOOK</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@LANGUAGE_OF_BOOK" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id_book" DataSetColumn="Id_book" />
+              <Mapping SourceColumn="Title" DataSetColumn="Title" />
+              <Mapping SourceColumn="Author_Surname" DataSetColumn="Author_Surname" />
+              <Mapping SourceColumn="Author_Name" DataSetColumn="Author_Name" />
+              <Mapping SourceColumn="Author_Patronymic" DataSetColumn="Author_Patronymic" />
+              <Mapping SourceColumn="Year" DataSetColumn="Year" />
+              <Mapping SourceColumn="Count_of_book" DataSetColumn="Count_of_book" />
+              <Mapping SourceColumn="Genre" DataSetColumn="Genre" />
+              <Mapping SourceColumn="Original_language" DataSetColumn="Original_language" />
+              <Mapping SourceColumn="All_count_book_in_library" DataSetColumn="All_count_book_in_library" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TABLE_DAYS_BOOK_TURN_INTableAdapter" GeneratorDataComponentClassName="TABLE_DAYS_BOOK_TURN_INTableAdapter" Name="TABLE_DAYS_BOOK_TURN_IN" UserDataComponentName="TABLE_DAYS_BOOK_TURN_INTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.TABLE_DAYS_BOOK_TURN_IN" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TITLE, DATE_END, DAYS FROM dbo.TABLE_DAYS_BOOK_TURN_IN(@ID_READER)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID_READER" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID_READER" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TITLE" DataSetColumn="TITLE" />
+              <Mapping SourceColumn="DATE_END" DataSetColumn="DATE_END" />
+              <Mapping SourceColumn="DAYS" DataSetColumn="DAYS" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BLOCKSTableAdapter" GeneratorDataComponentClassName="BLOCKSTableAdapter" Name="BLOCKS" UserDataComponentName="BLOCKSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.BLOCKS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [BLOCKS] WHERE (((@IsNull_Reason = 1 AND [Reason] IS NULL) OR ([Reason] = @Original_Reason)) AND ((@IsNull_Date_Start = 1 AND [Date_Start] IS NULL) OR ([Date_Start] = @Original_Date_Start)) AND ([Id_reader] = @Original_Id_reader))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Reason" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Reason" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Reason" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Reason" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date_Start" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date_Start" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Date_Start" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date_Start" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_reader" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_reader" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [BLOCKS] ([Reason], [Date_Start], [Id_reader]) VALUES (@Reason, @Date_Start, @Id_reader);
+SELECT Reason, Date_Start, Id_reader FROM BLOCKS WHERE (Id_reader = @Id_reader)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Reason" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Reason" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Date_Start" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date_Start" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_reader" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_reader" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Reason, Date_Start, Id_reader FROM BLOCKS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [BLOCKS] SET [Reason] = @Reason, [Date_Start] = @Date_Start, [Id_reader] = @Id_reader WHERE (((@IsNull_Reason = 1 AND [Reason] IS NULL) OR ([Reason] = @Original_Reason)) AND ((@IsNull_Date_Start = 1 AND [Date_Start] IS NULL) OR ([Date_Start] = @Original_Date_Start)) AND ([Id_reader] = @Original_Id_reader));
+SELECT Reason, Date_Start, Id_reader FROM BLOCKS WHERE (Id_reader = @Id_reader)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Reason" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Reason" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Date_Start" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date_Start" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_reader" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_reader" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Reason" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Reason" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Reason" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Reason" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date_Start" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date_Start" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Date_Start" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date_Start" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_reader" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_reader" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Reason" DataSetColumn="Reason" />
+              <Mapping SourceColumn="Date_Start" DataSetColumn="Date_Start" />
+              <Mapping SourceColumn="Id_reader" DataSetColumn="Id_reader" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BOOKTableAdapter" GeneratorDataComponentClassName="BOOKTableAdapter" Name="BOOK" UserDataComponentName="BOOKTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.BOOK" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[BOOK] WHERE (([Id_book] = @Original_Id_book) AND ((@IsNull_Title = 1 AND [Title] IS NULL) OR ([Title] = @Original_Title)) AND ((@IsNull_Author_Surname = 1 AND [Author_Surname] IS NULL) OR ([Author_Surname] = @Original_Author_Surname)) AND ((@IsNull_Author_Name = 1 AND [Author_Name] IS NULL) OR ([Author_Name] = @Original_Author_Name)) AND ((@IsNull_Author_Patronymic = 1 AND [Author_Patronymic] IS NULL) OR ([Author_Patronymic] = @Original_Author_Patronymic)) AND ((@IsNull_Year = 1 AND [Year] IS NULL) OR ([Year] = @Original_Year)) AND ((@IsNull_Count_of_book = 1 AND [Count_of_book] IS NULL) OR ([Count_of_book] = @Original_Count_of_book)) AND ((@IsNull_Genre = 1 AND [Genre] IS NULL) OR ([Genre] = @Original_Genre)) AND ((@p3 = 1 AND [Original_language] IS NULL) OR ([Original_language] = @p2)) AND ((@IsNull_All_count_book_in_library = 1 AND [All_count_book_in_library] IS NULL) OR ([All_count_book_in_library] = @Original_All_count_book_in_library)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_book" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Title" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Title" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Title" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Title" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Author_Surname" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Author_Surname" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Author_Surname" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Author_Surname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Author_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Author_Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Author_Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Author_Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Author_Patronymic" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Author_Patronymic" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Author_Patronymic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Author_Patronymic" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Count_of_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Count_of_book" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Count_of_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Count_of_book" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Genre" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Genre" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Genre" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Genre" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Original_language" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Original_language" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_All_count_book_in_library" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="All_count_book_in_library" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_All_count_book_in_library" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="All_count_book_in_library" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[BOOK] ([Title], [Author_Surname], [Author_Name], [Author_Patronymic], [Year], [Count_of_book], [Genre], [Original_language], [All_count_book_in_library]) VALUES (@Title, @Author_Surname, @Author_Name, @Author_Patronymic, @Year, @Count_of_book, @Genre, @p1, @All_count_book_in_library);
+SELECT Id_book, Title, Author_Surname, Author_Name, Author_Patronymic, Year, Count_of_book, Genre, Original_language, All_count_book_in_library FROM BOOK WHERE (Id_book = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Title" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Title" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Author_Surname" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Author_Surname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Author_Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Author_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Author_Patronymic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Author_Patronymic" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Count_of_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Count_of_book" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Genre" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Genre" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Original_language" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@All_count_book_in_library" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="All_count_book_in_library" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id_book, Title, Author_Surname, Author_Name, Author_Patronymic, Year, Count_of_book, Genre, Original_language, All_count_book_in_library FROM dbo.BOOK</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[BOOK] SET [Title] = @Title, [Author_Surname] = @Author_Surname, [Author_Name] = @Author_Name, [Author_Patronymic] = @Author_Patronymic, [Year] = @Year, [Count_of_book] = @Count_of_book, [Genre] = @Genre, [Original_language] = @p1, [All_count_book_in_library] = @All_count_book_in_library WHERE (([Id_book] = @Original_Id_book) AND ((@IsNull_Title = 1 AND [Title] IS NULL) OR ([Title] = @Original_Title)) AND ((@IsNull_Author_Surname = 1 AND [Author_Surname] IS NULL) OR ([Author_Surname] = @Original_Author_Surname)) AND ((@IsNull_Author_Name = 1 AND [Author_Name] IS NULL) OR ([Author_Name] = @Original_Author_Name)) AND ((@IsNull_Author_Patronymic = 1 AND [Author_Patronymic] IS NULL) OR ([Author_Patronymic] = @Original_Author_Patronymic)) AND ((@IsNull_Year = 1 AND [Year] IS NULL) OR ([Year] = @Original_Year)) AND ((@IsNull_Count_of_book = 1 AND [Count_of_book] IS NULL) OR ([Count_of_book] = @Original_Count_of_book)) AND ((@IsNull_Genre = 1 AND [Genre] IS NULL) OR ([Genre] = @Original_Genre)) AND ((@p3 = 1 AND [Original_language] IS NULL) OR ([Original_language] = @p2)) AND ((@IsNull_All_count_book_in_library = 1 AND [All_count_book_in_library] IS NULL) OR ([All_count_book_in_library] = @Original_All_count_book_in_library)));
+SELECT Id_book, Title, Author_Surname, Author_Name, Author_Patronymic, Year, Count_of_book, Genre, Original_language, All_count_book_in_library FROM BOOK WHERE (Id_book = @Id_book)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Title" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Title" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Author_Surname" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Author_Surname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Author_Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Author_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Author_Patronymic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Author_Patronymic" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Count_of_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Count_of_book" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Genre" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Genre" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Original_language" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@All_count_book_in_library" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="All_count_book_in_library" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_book" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Title" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Title" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Title" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Title" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Author_Surname" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Author_Surname" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Author_Surname" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Author_Surname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Author_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Author_Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Author_Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Author_Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Author_Patronymic" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Author_Patronymic" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Author_Patronymic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Author_Patronymic" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Count_of_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Count_of_book" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Count_of_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Count_of_book" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Genre" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Genre" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Genre" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Genre" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Original_language" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Original_language" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_All_count_book_in_library" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="All_count_book_in_library" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_All_count_book_in_library" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="All_count_book_in_library" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id_book" ColumnName="Id_book" DataSourceName="Library.dbo.BOOK" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id_book" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id_book" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id_book" DataSetColumn="Id_book" />
+              <Mapping SourceColumn="Title" DataSetColumn="Title" />
+              <Mapping SourceColumn="Author_Surname" DataSetColumn="Author_Surname" />
+              <Mapping SourceColumn="Author_Name" DataSetColumn="Author_Name" />
+              <Mapping SourceColumn="Author_Patronymic" DataSetColumn="Author_Patronymic" />
+              <Mapping SourceColumn="Year" DataSetColumn="Year" />
+              <Mapping SourceColumn="Count_of_book" DataSetColumn="Count_of_book" />
+              <Mapping SourceColumn="Genre" DataSetColumn="Genre" />
+              <Mapping SourceColumn="Original_language" DataSetColumn="Original_language" />
+              <Mapping SourceColumn="All_count_book_in_library" DataSetColumn="All_count_book_in_library" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DATE_RETURN_BOOKTableAdapter" GeneratorDataComponentClassName="DATE_RETURN_BOOKTableAdapter" Name="DATE_RETURN_BOOK" UserDataComponentName="DATE_RETURN_BOOKTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.DATE_RETURN_BOOK" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [DATE_RETURN_BOOK] WHERE (([Id_book] = @Original_Id_book) AND ([Id_reader] = @Original_Id_reader) AND ((@IsNull_Date_start = 1 AND [Date_start] IS NULL) OR ([Date_start] = @Original_Date_start)) AND ((@IsNull_Count_extend_book = 1 AND [Count_extend_book] IS NULL) OR ([Count_extend_book] = @Original_Count_extend_book)) AND ((@IsNull_Date_end = 1 AND [Date_end] IS NULL) OR ([Date_end] = @Original_Date_end)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_book" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_reader" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_reader" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date_start" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date_start" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Date_start" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date_start" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Count_extend_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Count_extend_book" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Count_extend_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Count_extend_book" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date_end" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date_end" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Date_end" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date_end" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [DATE_RETURN_BOOK] ([Id_book], [Id_reader], [Date_start], [Count_extend_book]) VALUES (@Id_book, @Id_reader, @Date_start, @Count_extend_book);
+SELECT Id_book, Id_reader, Date_start, Count_extend_book, Date_end FROM DATE_RETURN_BOOK WHERE (Id_book = @Id_book) AND (Id_reader = @Id_reader)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_book" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_reader" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_reader" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Date_start" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date_start" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Count_extend_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Count_extend_book" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id_book, Id_reader, Date_start, Count_extend_book, Date_end FROM DATE_RETURN_BOOK</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [DATE_RETURN_BOOK] SET [Id_book] = @Id_book, [Id_reader] = @Id_reader, [Date_start] = @Date_start, [Count_extend_book] = @Count_extend_book WHERE (([Id_book] = @Original_Id_book) AND ([Id_reader] = @Original_Id_reader) AND ((@IsNull_Date_start = 1 AND [Date_start] IS NULL) OR ([Date_start] = @Original_Date_start)) AND ((@IsNull_Count_extend_book = 1 AND [Count_extend_book] IS NULL) OR ([Count_extend_book] = @Original_Count_extend_book)) AND ((@IsNull_Date_end = 1 AND [Date_end] IS NULL) OR ([Date_end] = @Original_Date_end)));
+SELECT Id_book, Id_reader, Date_start, Count_extend_book, Date_end FROM DATE_RETURN_BOOK WHERE (Id_book = @Id_book) AND (Id_reader = @Id_reader)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_book" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_reader" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_reader" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Date_start" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date_start" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Count_extend_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Count_extend_book" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_book" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_reader" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_reader" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date_start" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date_start" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Date_start" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date_start" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Count_extend_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Count_extend_book" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Count_extend_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Count_extend_book" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date_end" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date_end" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Date_end" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date_end" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id_book" DataSetColumn="Id_book" />
+              <Mapping SourceColumn="Id_reader" DataSetColumn="Id_reader" />
+              <Mapping SourceColumn="Date_start" DataSetColumn="Date_start" />
+              <Mapping SourceColumn="Count_extend_book" DataSetColumn="Count_extend_book" />
+              <Mapping SourceColumn="Date_end" DataSetColumn="Date_end" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FORMS_READERTableAdapter" GeneratorDataComponentClassName="FORMS_READERTableAdapter" Name="FORMS_READER" UserDataComponentName="FORMS_READERTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.FORMS_READER" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[FORMS_READER] WHERE (([Id_reader] = @Original_Id_reader) AND ((@IsNull_Surname = 1 AND [Surname] IS NULL) OR ([Surname] = @Original_Surname)) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Patronymic = 1 AND [Patronymic] IS NULL) OR ([Patronymic] = @Original_Patronymic)) AND ((@IsNull_Birthday = 1 AND [Birthday] IS NULL) OR ([Birthday] = @Original_Birthday)) AND ((@IsNull_Phone = 1 AND [Phone] IS NULL) OR ([Phone] = @Original_Phone)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_reader" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_reader" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Surname" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Surname" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Surname" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Surname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Patronymic" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Patronymic" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Patronymic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Patronymic" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Birthday" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Birthday" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Birthday" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Birthday" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Phone" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Phone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[FORMS_READER] ([Surname], [Name], [Patronymic], [Birthday], [Phone]) VALUES (@Surname, @Name, @Patronymic, @Birthday, @Phone);
+SELECT Id_reader, Surname, Name, Patronymic, Birthday, Phone FROM FORMS_READER WHERE (Id_reader = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Surname" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Surname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Patronymic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Patronymic" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Birthday" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Birthday" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Phone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id_reader, Surname, Name, Patronymic, Birthday, Phone FROM dbo.FORMS_READER</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[FORMS_READER] SET [Surname] = @Surname, [Name] = @Name, [Patronymic] = @Patronymic, [Birthday] = @Birthday, [Phone] = @Phone WHERE (([Id_reader] = @Original_Id_reader) AND ((@IsNull_Surname = 1 AND [Surname] IS NULL) OR ([Surname] = @Original_Surname)) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Patronymic = 1 AND [Patronymic] IS NULL) OR ([Patronymic] = @Original_Patronymic)) AND ((@IsNull_Birthday = 1 AND [Birthday] IS NULL) OR ([Birthday] = @Original_Birthday)) AND ((@IsNull_Phone = 1 AND [Phone] IS NULL) OR ([Phone] = @Original_Phone)));
+SELECT Id_reader, Surname, Name, Patronymic, Birthday, Phone FROM FORMS_READER WHERE (Id_reader = @Id_reader)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Surname" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Surname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Patronymic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Patronymic" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Birthday" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Birthday" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Phone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_reader" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_reader" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Surname" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Surname" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Surname" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Surname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Patronymic" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Patronymic" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Patronymic" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Patronymic" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Birthday" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Birthday" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Birthday" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Birthday" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Phone" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Phone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id_reader" ColumnName="Id_reader" DataSourceName="Library.dbo.FORMS_READER" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id_reader" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id_reader" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id_reader" DataSetColumn="Id_reader" />
+              <Mapping SourceColumn="Surname" DataSetColumn="Surname" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Patronymic" DataSetColumn="Patronymic" />
+              <Mapping SourceColumn="Birthday" DataSetColumn="Birthday" />
+              <Mapping SourceColumn="Phone" DataSetColumn="Phone" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LOCATIONTableAdapter" GeneratorDataComponentClassName="LOCATIONTableAdapter" Name="LOCATION" UserDataComponentName="LOCATIONTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.LOCATION" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[LOCATION] WHERE (([Id_book] = @Original_Id_book) AND ((@IsNull_Number_hall = 1 AND [Number_hall] IS NULL) OR ([Number_hall] = @Original_Number_hall)) AND ((@IsNull_Polka = 1 AND [Polka] IS NULL) OR ([Polka] = @Original_Polka)) AND ((@IsNull_Stend = 1 AND [Stend] IS NULL) OR ([Stend] = @Original_Stend)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_book" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Number_hall" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Number_hall" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Number_hall" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Number_hall" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Polka" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Polka" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Polka" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Polka" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Stend" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Stend" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Stend" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Stend" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[LOCATION] ([Id_book], [Number_hall], [Polka], [Stend]) VALUES (@Id_book, @Number_hall, @Polka, @Stend)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_book" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Number_hall" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Number_hall" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Polka" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Polka" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Stend" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Stend" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Id_book, Number_hall, Polka, Stend FROM dbo.LOCATION</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[LOCATION] SET [Id_book] = @Id_book, [Number_hall] = @Number_hall, [Polka] = @Polka, [Stend] = @Stend WHERE (([Id_book] = @Original_Id_book) AND ((@IsNull_Number_hall = 1 AND [Number_hall] IS NULL) OR ([Number_hall] = @Original_Number_hall)) AND ((@IsNull_Polka = 1 AND [Polka] IS NULL) OR ([Polka] = @Original_Polka)) AND ((@IsNull_Stend = 1 AND [Stend] IS NULL) OR ([Stend] = @Original_Stend)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_book" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Number_hall" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Number_hall" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Polka" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Polka" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Stend" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Stend" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_book" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Number_hall" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Number_hall" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Number_hall" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Number_hall" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Polka" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Polka" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Polka" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Polka" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Stend" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Stend" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Stend" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Stend" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id_book" DataSetColumn="Id_book" />
+              <Mapping SourceColumn="Number_hall" DataSetColumn="Number_hall" />
+              <Mapping SourceColumn="Polka" DataSetColumn="Polka" />
+              <Mapping SourceColumn="Stend" DataSetColumn="Stend" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="USERSTableAdapter" GeneratorDataComponentClassName="USERSTableAdapter" Name="USERS" UserDataComponentName="USERSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.USERS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[USERS] ([RIGHTS], [ID], [PASSWORD], [ID_READER_USER]) VALUES (@RIGHTS, @ID, @PASSWORD, @ID_READER_USER)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@RIGHTS" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RIGHTS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PASSWORD" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PASSWORD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ID_READER_USER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID_READER_USER" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT RIGHTS, ID, PASSWORD, ID_READER_USER FROM dbo.USERS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RIGHTS" DataSetColumn="RIGHTS" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="PASSWORD" DataSetColumn="PASSWORD" />
+              <Mapping SourceColumn="ID_READER_USER" DataSetColumn="ID_READER_USER" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Function_of_SUMM_OF_DEBT_ONE_BOOK_TABLETableAdapter" GeneratorDataComponentClassName="Function_of_SUMM_OF_DEBT_ONE_BOOK_TABLETableAdapter" Name="Function_of_SUMM_OF_DEBT_ONE_BOOK_TABLE" UserDataComponentName="Function_of_SUMM_OF_DEBT_ONE_BOOK_TABLETableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.Function_of_SUMM_OF_DEBT_ONE_BOOK_TABLE" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Author_Surname, Author_Name, TITLE, SUMM FROM dbo.Function_of_SUMM_OF_DEBT_ONE_BOOK_TABLE(@ID_READER)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID_READER" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID_READER" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Author_Surname" DataSetColumn="Author_Surname" />
+              <Mapping SourceColumn="Author_Name" DataSetColumn="Author_Name" />
+              <Mapping SourceColumn="TITLE" DataSetColumn="TITLE" />
+              <Mapping SourceColumn="SUMM" DataSetColumn="SUMM" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EXTENDTableAdapter" GeneratorDataComponentClassName="EXTENDTableAdapter" Name="EXTEND" UserDataComponentName="EXTENDTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.EXTEND" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[EXTEND] ([Id_book], [Id_reader], [Date_start], [Date_end], [Count_extend_ex]) VALUES (@Id_book, @Id_reader, @Date_start, @Date_end, @Count_extend_ex)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_book" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_book" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id_reader" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id_reader" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Date_start" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date_start" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Date_end" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date_end" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Count_extend_ex" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Count_extend_ex" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id_book, Id_reader, Date_start, Date_end, Count_extend_ex FROM dbo.EXTEND</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id_book" DataSetColumn="Id_book" />
+              <Mapping SourceColumn="Id_reader" DataSetColumn="Id_reader" />
+              <Mapping SourceColumn="Date_start" DataSetColumn="Date_start" />
+              <Mapping SourceColumn="Date_end" DataSetColumn="Date_end" />
+              <Mapping SourceColumn="Count_extend_ex" DataSetColumn="Count_extend_ex" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TABLE_DATE_RETURN_BOOKTableAdapter" GeneratorDataComponentClassName="TABLE_DATE_RETURN_BOOKTableAdapter" Name="TABLE_DATE_RETURN_BOOK" UserDataComponentName="TABLE_DATE_RETURN_BOOKTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.TABLE_DATE_RETURN_BOOK" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_BOOK, ID_READER, DATE_START, DATE_END, COUNT_OF_EX FROM dbo.TABLE_DATE_RETURN_BOOK()</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_BOOK" DataSetColumn="ID_BOOK" />
+              <Mapping SourceColumn="ID_READER" DataSetColumn="ID_READER" />
+              <Mapping SourceColumn="DATE_START" DataSetColumn="DATE_START" />
+              <Mapping SourceColumn="DATE_END" DataSetColumn="DATE_END" />
+              <Mapping SourceColumn="COUNT_OF_EX" DataSetColumn="COUNT_OF_EX" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources>
+          <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.Function_of_DAYS_BEFORE_UNBLOCK" DbObjectType="Function" GenerateShortCommands="true" GeneratorSourceName="Function_of_DAYS_BEFORE_UNBLOCK" MethodsParameterType="CLR" Modifier="Public" Name="Function_of_DAYS_BEFORE_UNBLOCK" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Function_of_DAYS_BEFORE_UNBLOCK">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.Function_of_DAYS_BEFORE_UNBLOCK</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID_READER" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.Function_of_SUMM_OF_DEBT" DbObjectType="Function" GenerateShortCommands="true" GeneratorSourceName="Function_of_SUMM_OF_DEBT" MethodsParameterType="CLR" Modifier="Public" Name="Function_of_SUMM_OF_DEBT" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="Function_of_SUMM_OF_DEBT">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.Function_of_SUMM_OF_DEBT</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID_READER" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.Function_of_SUMM_OF_DEBT_ONE_BOOK" DbObjectType="Function" GenerateShortCommands="true" GeneratorSourceName="Function_of_SUMM_OF_DEBT_ONE_BOOK" MethodsParameterType="CLR" Modifier="Public" Name="Function_of_SUMM_OF_DEBT_ONE_BOOK" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="Function_of_SUMM_OF_DEBT_ONE_BOOK">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.Function_of_SUMM_OF_DEBT_ONE_BOOK</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID_READER" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID_BOOK" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.TABLE_BOOK_IN_STOCK" DbObjectType="Function" GenerateShortCommands="true" GeneratorSourceName="TABLE_BOOK_IN_STOCK" MethodsParameterType="CLR" Modifier="Public" Name="TABLE_BOOK_IN_STOCK" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="TABLE_BOOK_IN_STOCK">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="false">
+                <CommandText>SELECT Author_Surname, Author_Name, Title, Number_hall, Polka, Stend FROM dbo.TABLE_BOOK_IN_STOCK()</CommandText>
+                <Parameters />
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.TABLE_DEBT_BOOK_OF_USER" DbObjectType="Function" GenerateShortCommands="true" GeneratorSourceName="TABLE_DEBT_BOOK_OF_USER" MethodsParameterType="CLR" Modifier="Public" Name="TABLE_DEBT_BOOK_OF_USER" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="TABLE_DEBT_BOOK_OF_USER">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="false">
+                <CommandText>SELECT TITLE_BOOK, DATE_DEBT, Comment FROM dbo.TABLE_DEBT_BOOK_OF_USER(@ID_READER)</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="false" AutogeneratedName="ID_READER" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID_READER" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.TABLE_BOOK_LOCATION" DbObjectType="Function" GenerateShortCommands="true" GeneratorSourceName="TABLE_BOOK_LOCATION" MethodsParameterType="CLR" Modifier="Public" Name="TABLE_BOOK_LOCATION" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="TABLE_BOOK_LOCATION">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="false">
+                <CommandText>SELECT Author_Surname, Author_Name, Title, Number_hall, Stend, Polka FROM dbo.TABLE_BOOK_LOCATION()</CommandText>
+                <Parameters />
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="LibraryConnectionString (Settings)" DbObjectName="Library.dbo.Function_of_DAYS_AFTER_BLOCK" DbObjectType="Function" GenerateShortCommands="true" GeneratorSourceName="Function_of_DAYS_AFTER_BLOCK" MethodsParameterType="CLR" Modifier="Public" Name="Function_of_DAYS_AFTER_BLOCK" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="Function_of_DAYS_AFTER_BLOCK">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.Function_of_DAYS_AFTER_BLOCK</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID_READER" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LibraryDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="LibraryDataSet" msprop:Generator_UserDSName="LibraryDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Activity_Reader" msprop:Generator_TableClassName="Activity_ReaderDataTable" msprop:Generator_TableVarName="tableActivity_Reader" msprop:Generator_TablePropName="Activity_Reader" msprop:Generator_RowDeletingName="Activity_ReaderRowDeleting" msprop:Generator_RowChangingName="Activity_ReaderRowChanging" msprop:Generator_RowEvHandlerName="Activity_ReaderRowChangeEventHandler" msprop:Generator_RowDeletedName="Activity_ReaderRowDeleted" msprop:Generator_UserTableName="Activity_Reader" msprop:Generator_RowChangedName="Activity_ReaderRowChanged" msprop:Generator_RowEvArgName="Activity_ReaderRowChangeEvent" msprop:Generator_RowClassName="Activity_ReaderRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_reader" msprop:Generator_ColumnVarNameInTable="columnId_reader" msprop:Generator_ColumnPropNameInRow="Id_reader" msprop:Generator_ColumnPropNameInTable="Id_readerColumn" msprop:Generator_UserColumnName="Id_reader" type="xs:int" />
+              <xs:element name="Surname" msprop:Generator_ColumnVarNameInTable="columnSurname" msprop:Generator_ColumnPropNameInRow="Surname" msprop:Generator_ColumnPropNameInTable="SurnameColumn" msprop:Generator_UserColumnName="Surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Patronymic" msprop:Generator_ColumnVarNameInTable="columnPatronymic" msprop:Generator_ColumnPropNameInRow="Patronymic" msprop:Generator_ColumnPropNameInTable="PatronymicColumn" msprop:Generator_UserColumnName="Patronymic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Birthday" msprop:Generator_ColumnVarNameInTable="columnBirthday" msprop:Generator_ColumnPropNameInRow="Birthday" msprop:Generator_ColumnPropNameInTable="BirthdayColumn" msprop:Generator_UserColumnName="Birthday" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Phone" msprop:Generator_ColumnVarNameInTable="columnPhone" msprop:Generator_ColumnPropNameInRow="Phone" msprop:Generator_ColumnPropNameInTable="PhoneColumn" msprop:Generator_UserColumnName="Phone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="COUNT_DEBT_BOOK" msprop:Generator_TableClassName="COUNT_DEBT_BOOKDataTable" msprop:Generator_TableVarName="tableCOUNT_DEBT_BOOK" msprop:Generator_TablePropName="COUNT_DEBT_BOOK" msprop:Generator_RowDeletingName="COUNT_DEBT_BOOKRowDeleting" msprop:Generator_RowChangingName="COUNT_DEBT_BOOKRowChanging" msprop:Generator_RowEvHandlerName="COUNT_DEBT_BOOKRowChangeEventHandler" msprop:Generator_RowDeletedName="COUNT_DEBT_BOOKRowDeleted" msprop:Generator_UserTableName="COUNT_DEBT_BOOK" msprop:Generator_RowChangedName="COUNT_DEBT_BOOKRowChanged" msprop:Generator_RowEvArgName="COUNT_DEBT_BOOKRowChangeEvent" msprop:Generator_RowClassName="COUNT_DEBT_BOOKRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_READER" msprop:Generator_ColumnVarNameInTable="columnID_READER" msprop:Generator_ColumnPropNameInRow="ID_READER" msprop:Generator_ColumnPropNameInTable="ID_READERColumn" msprop:Generator_UserColumnName="ID_READER" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_BOOK" msprop:Generator_ColumnVarNameInTable="columnID_BOOK" msprop:Generator_ColumnPropNameInRow="ID_BOOK" msprop:Generator_ColumnPropNameInTable="ID_BOOKColumn" msprop:Generator_UserColumnName="ID_BOOK" type="xs:int" minOccurs="0" />
+              <xs:element name="DAYS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDAYS" msprop:Generator_ColumnPropNameInRow="DAYS" msprop:Generator_ColumnPropNameInTable="DAYSColumn" msprop:Generator_UserColumnName="DAYS" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="COUNT_TITLE" msprop:Generator_TableClassName="COUNT_TITLEDataTable" msprop:Generator_TableVarName="tableCOUNT_TITLE" msprop:Generator_TablePropName="COUNT_TITLE" msprop:Generator_RowDeletingName="COUNT_TITLERowDeleting" msprop:Generator_RowChangingName="COUNT_TITLERowChanging" msprop:Generator_RowEvHandlerName="COUNT_TITLERowChangeEventHandler" msprop:Generator_RowDeletedName="COUNT_TITLERowDeleted" msprop:Generator_UserTableName="COUNT_TITLE" msprop:Generator_RowChangedName="COUNT_TITLERowChanged" msprop:Generator_RowEvArgName="COUNT_TITLERowChangeEvent" msprop:Generator_RowClassName="COUNT_TITLERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NAME" msprop:Generator_ColumnVarNameInTable="columnNAME" msprop:Generator_ColumnPropNameInRow="NAME" msprop:Generator_ColumnPropNameInTable="NAMEColumn" msprop:Generator_UserColumnName="NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SURNAME" msprop:Generator_ColumnVarNameInTable="columnSURNAME" msprop:Generator_ColumnPropNameInRow="SURNAME" msprop:Generator_ColumnPropNameInTable="SURNAMEColumn" msprop:Generator_UserColumnName="SURNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QUANTITY" msprop:Generator_ColumnVarNameInTable="columnQUANTITY" msprop:Generator_ColumnPropNameInRow="QUANTITY" msprop:Generator_ColumnPropNameInTable="QUANTITYColumn" msprop:Generator_UserColumnName="QUANTITY" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Debt" msprop:Generator_TableClassName="DebtDataTable" msprop:Generator_TableVarName="tableDebt" msprop:Generator_TablePropName="Debt" msprop:Generator_RowDeletingName="DebtRowDeleting" msprop:Generator_RowChangingName="DebtRowChanging" msprop:Generator_RowEvHandlerName="DebtRowChangeEventHandler" msprop:Generator_RowDeletedName="DebtRowDeleted" msprop:Generator_UserTableName="Debt" msprop:Generator_RowChangedName="DebtRowChanged" msprop:Generator_RowEvArgName="DebtRowChangeEvent" msprop:Generator_RowClassName="DebtRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="TITLE_BOOK" msprop:Generator_ColumnVarNameInTable="columnTITLE_BOOK" msprop:Generator_ColumnPropNameInRow="TITLE_BOOK" msprop:Generator_ColumnPropNameInTable="TITLE_BOOKColumn" msprop:Generator_UserColumnName="TITLE_BOOK" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIME_OF_DEBT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTIME_OF_DEBT" msprop:Generator_ColumnPropNameInRow="TIME_OF_DEBT" msprop:Generator_ColumnPropNameInTable="TIME_OF_DEBTColumn" msprop:Generator_UserColumnName="TIME_OF_DEBT" type="xs:int" minOccurs="0" />
+              <xs:element name="SURNAME" msprop:Generator_ColumnVarNameInTable="columnSURNAME" msprop:Generator_ColumnPropNameInRow="SURNAME" msprop:Generator_ColumnPropNameInTable="SURNAMEColumn" msprop:Generator_UserColumnName="SURNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NAME" msprop:Generator_ColumnVarNameInTable="columnNAME" msprop:Generator_ColumnPropNameInRow="NAME" msprop:Generator_ColumnPropNameInTable="NAMEColumn" msprop:Generator_UserColumnName="NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PATRONYMIC" msprop:Generator_ColumnVarNameInTable="columnPATRONYMIC" msprop:Generator_ColumnPropNameInRow="PATRONYMIC" msprop:Generator_ColumnPropNameInTable="PATRONYMICColumn" msprop:Generator_UserColumnName="PATRONYMIC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PHONE" msprop:Generator_ColumnVarNameInTable="columnPHONE" msprop:Generator_ColumnPropNameInRow="PHONE" msprop:Generator_ColumnPropNameInTable="PHONEColumn" msprop:Generator_UserColumnName="PHONE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BOOK_OF_AUTHOR" msprop:Generator_TableClassName="BOOK_OF_AUTHORDataTable" msprop:Generator_TableVarName="tableBOOK_OF_AUTHOR" msprop:Generator_TablePropName="BOOK_OF_AUTHOR" msprop:Generator_RowDeletingName="BOOK_OF_AUTHORRowDeleting" msprop:Generator_RowChangingName="BOOK_OF_AUTHORRowChanging" msprop:Generator_RowEvHandlerName="BOOK_OF_AUTHORRowChangeEventHandler" msprop:Generator_RowDeletedName="BOOK_OF_AUTHORRowDeleted" msprop:Generator_UserTableName="BOOK_OF_AUTHOR" msprop:Generator_RowChangedName="BOOK_OF_AUTHORRowChanged" msprop:Generator_RowEvArgName="BOOK_OF_AUTHORRowChangeEvent" msprop:Generator_RowClassName="BOOK_OF_AUTHORRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:int" minOccurs="0" />
+              <xs:element name="Count_of_book" msprop:Generator_ColumnVarNameInTable="columnCount_of_book" msprop:Generator_ColumnPropNameInRow="Count_of_book" msprop:Generator_ColumnPropNameInTable="Count_of_bookColumn" msprop:Generator_UserColumnName="Count_of_book" type="xs:int" minOccurs="0" />
+              <xs:element name="Genre" msprop:Generator_ColumnVarNameInTable="columnGenre" msprop:Generator_ColumnPropNameInRow="Genre" msprop:Generator_ColumnPropNameInTable="GenreColumn" msprop:Generator_UserColumnName="Genre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Original_language" msprop:Generator_ColumnVarNameInTable="columnOriginal_language" msprop:Generator_ColumnPropNameInRow="Original_language" msprop:Generator_ColumnPropNameInTable="Original_languageColumn" msprop:Generator_UserColumnName="Original_language" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GENRE__OF_BOOK" msprop:Generator_TableClassName="GENRE__OF_BOOKDataTable" msprop:Generator_TableVarName="tableGENRE__OF_BOOK" msprop:Generator_TablePropName="GENRE__OF_BOOK" msprop:Generator_RowDeletingName="GENRE__OF_BOOKRowDeleting" msprop:Generator_RowChangingName="GENRE__OF_BOOKRowChanging" msprop:Generator_RowEvHandlerName="GENRE__OF_BOOKRowChangeEventHandler" msprop:Generator_RowDeletedName="GENRE__OF_BOOKRowDeleted" msprop:Generator_UserTableName="GENRE__OF_BOOK" msprop:Generator_RowChangedName="GENRE__OF_BOOKRowChanged" msprop:Generator_RowEvArgName="GENRE__OF_BOOKRowChangeEvent" msprop:Generator_RowClassName="GENRE__OF_BOOKRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_book" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnId_book" msprop:Generator_ColumnPropNameInRow="Id_book" msprop:Generator_ColumnPropNameInTable="Id_bookColumn" msprop:Generator_UserColumnName="Id_book" type="xs:int" />
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Author_Surname" msprop:Generator_ColumnVarNameInTable="columnAuthor_Surname" msprop:Generator_ColumnPropNameInRow="Author_Surname" msprop:Generator_ColumnPropNameInTable="Author_SurnameColumn" msprop:Generator_UserColumnName="Author_Surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Author_Name" msprop:Generator_ColumnVarNameInTable="columnAuthor_Name" msprop:Generator_ColumnPropNameInRow="Author_Name" msprop:Generator_ColumnPropNameInTable="Author_NameColumn" msprop:Generator_UserColumnName="Author_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Author_Patronymic" msprop:Generator_ColumnVarNameInTable="columnAuthor_Patronymic" msprop:Generator_ColumnPropNameInRow="Author_Patronymic" msprop:Generator_ColumnPropNameInTable="Author_PatronymicColumn" msprop:Generator_UserColumnName="Author_Patronymic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:int" minOccurs="0" />
+              <xs:element name="Count_of_book" msprop:Generator_ColumnVarNameInTable="columnCount_of_book" msprop:Generator_ColumnPropNameInRow="Count_of_book" msprop:Generator_ColumnPropNameInTable="Count_of_bookColumn" msprop:Generator_UserColumnName="Count_of_book" type="xs:int" minOccurs="0" />
+              <xs:element name="Genre" msprop:Generator_ColumnVarNameInTable="columnGenre" msprop:Generator_ColumnPropNameInRow="Genre" msprop:Generator_ColumnPropNameInTable="GenreColumn" msprop:Generator_UserColumnName="Genre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Original_language" msprop:Generator_ColumnVarNameInTable="columnOriginal_language" msprop:Generator_ColumnPropNameInRow="Original_language" msprop:Generator_ColumnPropNameInTable="Original_languageColumn" msprop:Generator_UserColumnName="Original_language" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="All_count_book_in_library" msprop:Generator_ColumnVarNameInTable="columnAll_count_book_in_library" msprop:Generator_ColumnPropNameInRow="All_count_book_in_library" msprop:Generator_ColumnPropNameInTable="All_count_book_in_libraryColumn" msprop:Generator_UserColumnName="All_count_book_in_library" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LOCATION_OF_BOOK" msprop:Generator_TableClassName="LOCATION_OF_BOOKDataTable" msprop:Generator_TableVarName="tableLOCATION_OF_BOOK" msprop:Generator_TablePropName="LOCATION_OF_BOOK" msprop:Generator_RowDeletingName="LOCATION_OF_BOOKRowDeleting" msprop:Generator_RowChangingName="LOCATION_OF_BOOKRowChanging" msprop:Generator_RowEvHandlerName="LOCATION_OF_BOOKRowChangeEventHandler" msprop:Generator_RowDeletedName="LOCATION_OF_BOOKRowDeleted" msprop:Generator_UserTableName="LOCATION_OF_BOOK" msprop:Generator_RowChangedName="LOCATION_OF_BOOKRowChanged" msprop:Generator_RowEvArgName="LOCATION_OF_BOOKRowChangeEvent" msprop:Generator_RowClassName="LOCATION_OF_BOOKRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMBER_HALL" msprop:Generator_ColumnVarNameInTable="columnNUMBER_HALL" msprop:Generator_ColumnPropNameInRow="NUMBER_HALL" msprop:Generator_ColumnPropNameInTable="NUMBER_HALLColumn" msprop:Generator_UserColumnName="NUMBER_HALL" type="xs:int" minOccurs="0" />
+              <xs:element name="POLKA" msprop:Generator_ColumnVarNameInTable="columnPOLKA" msprop:Generator_ColumnPropNameInRow="POLKA" msprop:Generator_ColumnPropNameInTable="POLKAColumn" msprop:Generator_UserColumnName="POLKA" type="xs:int" minOccurs="0" />
+              <xs:element name="STEND" msprop:Generator_ColumnVarNameInTable="columnSTEND" msprop:Generator_ColumnPropNameInRow="STEND" msprop:Generator_ColumnPropNameInTable="STENDColumn" msprop:Generator_UserColumnName="STEND" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ORIGINAL_LANGUAGE__OF_BOOK" msprop:Generator_TableClassName="ORIGINAL_LANGUAGE__OF_BOOKDataTable" msprop:Generator_TableVarName="tableORIGINAL_LANGUAGE__OF_BOOK" msprop:Generator_TablePropName="ORIGINAL_LANGUAGE__OF_BOOK" msprop:Generator_RowDeletingName="ORIGINAL_LANGUAGE__OF_BOOKRowDeleting" msprop:Generator_RowChangingName="ORIGINAL_LANGUAGE__OF_BOOKRowChanging" msprop:Generator_RowEvHandlerName="ORIGINAL_LANGUAGE__OF_BOOKRowChangeEventHandler" msprop:Generator_RowDeletedName="ORIGINAL_LANGUAGE__OF_BOOKRowDeleted" msprop:Generator_UserTableName="ORIGINAL_LANGUAGE__OF_BOOK" msprop:Generator_RowChangedName="ORIGINAL_LANGUAGE__OF_BOOKRowChanged" msprop:Generator_RowEvArgName="ORIGINAL_LANGUAGE__OF_BOOKRowChangeEvent" msprop:Generator_RowClassName="ORIGINAL_LANGUAGE__OF_BOOKRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_book" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnId_book" msprop:Generator_ColumnPropNameInRow="Id_book" msprop:Generator_ColumnPropNameInTable="Id_bookColumn" msprop:Generator_UserColumnName="Id_book" type="xs:int" />
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Author_Surname" msprop:Generator_ColumnVarNameInTable="columnAuthor_Surname" msprop:Generator_ColumnPropNameInRow="Author_Surname" msprop:Generator_ColumnPropNameInTable="Author_SurnameColumn" msprop:Generator_UserColumnName="Author_Surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Author_Name" msprop:Generator_ColumnVarNameInTable="columnAuthor_Name" msprop:Generator_ColumnPropNameInRow="Author_Name" msprop:Generator_ColumnPropNameInTable="Author_NameColumn" msprop:Generator_UserColumnName="Author_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Author_Patronymic" msprop:Generator_ColumnVarNameInTable="columnAuthor_Patronymic" msprop:Generator_ColumnPropNameInRow="Author_Patronymic" msprop:Generator_ColumnPropNameInTable="Author_PatronymicColumn" msprop:Generator_UserColumnName="Author_Patronymic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:int" minOccurs="0" />
+              <xs:element name="Count_of_book" msprop:Generator_ColumnVarNameInTable="columnCount_of_book" msprop:Generator_ColumnPropNameInRow="Count_of_book" msprop:Generator_ColumnPropNameInTable="Count_of_bookColumn" msprop:Generator_UserColumnName="Count_of_book" type="xs:int" minOccurs="0" />
+              <xs:element name="Genre" msprop:Generator_ColumnVarNameInTable="columnGenre" msprop:Generator_ColumnPropNameInRow="Genre" msprop:Generator_ColumnPropNameInTable="GenreColumn" msprop:Generator_UserColumnName="Genre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Original_language" msprop:Generator_ColumnVarNameInTable="columnOriginal_language" msprop:Generator_ColumnPropNameInRow="Original_language" msprop:Generator_ColumnPropNameInTable="Original_languageColumn" msprop:Generator_UserColumnName="Original_language" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="All_count_book_in_library" msprop:Generator_ColumnVarNameInTable="columnAll_count_book_in_library" msprop:Generator_ColumnPropNameInRow="All_count_book_in_library" msprop:Generator_ColumnPropNameInTable="All_count_book_in_libraryColumn" msprop:Generator_UserColumnName="All_count_book_in_library" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TABLE_DAYS_BOOK_TURN_IN" msprop:Generator_TableClassName="TABLE_DAYS_BOOK_TURN_INDataTable" msprop:Generator_TableVarName="tableTABLE_DAYS_BOOK_TURN_IN" msprop:Generator_TablePropName="TABLE_DAYS_BOOK_TURN_IN" msprop:Generator_RowDeletingName="TABLE_DAYS_BOOK_TURN_INRowDeleting" msprop:Generator_RowChangingName="TABLE_DAYS_BOOK_TURN_INRowChanging" msprop:Generator_RowEvHandlerName="TABLE_DAYS_BOOK_TURN_INRowChangeEventHandler" msprop:Generator_RowDeletedName="TABLE_DAYS_BOOK_TURN_INRowDeleted" msprop:Generator_UserTableName="TABLE_DAYS_BOOK_TURN_IN" msprop:Generator_RowChangedName="TABLE_DAYS_BOOK_TURN_INRowChanged" msprop:Generator_RowEvArgName="TABLE_DAYS_BOOK_TURN_INRowChangeEvent" msprop:Generator_RowClassName="TABLE_DAYS_BOOK_TURN_INRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TITLE" msprop:Generator_ColumnVarNameInTable="columnTITLE" msprop:Generator_ColumnPropNameInRow="TITLE" msprop:Generator_ColumnPropNameInTable="TITLEColumn" msprop:Generator_UserColumnName="TITLE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATE_END" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDATE_END" msprop:Generator_ColumnPropNameInRow="DATE_END" msprop:Generator_ColumnPropNameInTable="DATE_ENDColumn" msprop:Generator_UserColumnName="DATE_END" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DAYS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDAYS" msprop:Generator_ColumnPropNameInRow="DAYS" msprop:Generator_ColumnPropNameInTable="DAYSColumn" msprop:Generator_UserColumnName="DAYS" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BLOCKS" msprop:Generator_TableClassName="BLOCKSDataTable" msprop:Generator_TableVarName="tableBLOCKS" msprop:Generator_RowChangedName="BLOCKSRowChanged" msprop:Generator_TablePropName="BLOCKS" msprop:Generator_RowDeletingName="BLOCKSRowDeleting" msprop:Generator_RowChangingName="BLOCKSRowChanging" msprop:Generator_RowEvHandlerName="BLOCKSRowChangeEventHandler" msprop:Generator_RowDeletedName="BLOCKSRowDeleted" msprop:Generator_RowClassName="BLOCKSRow" msprop:Generator_UserTableName="BLOCKS" msprop:Generator_RowEvArgName="BLOCKSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Reason" msprop:Generator_ColumnVarNameInTable="columnReason" msprop:Generator_ColumnPropNameInRow="Reason" msprop:Generator_ColumnPropNameInTable="ReasonColumn" msprop:Generator_UserColumnName="Reason" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date_Start" msprop:Generator_ColumnVarNameInTable="columnDate_Start" msprop:Generator_ColumnPropNameInRow="Date_Start" msprop:Generator_ColumnPropNameInTable="Date_StartColumn" msprop:Generator_UserColumnName="Date_Start" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Id_reader" msprop:Generator_ColumnVarNameInTable="columnId_reader" msprop:Generator_ColumnPropNameInRow="Id_reader" msprop:Generator_ColumnPropNameInTable="Id_readerColumn" msprop:Generator_UserColumnName="Id_reader" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BOOK" msprop:Generator_TableClassName="BOOKDataTable" msprop:Generator_TableVarName="tableBOOK" msprop:Generator_RowChangedName="BOOKRowChanged" msprop:Generator_TablePropName="BOOK" msprop:Generator_RowDeletingName="BOOKRowDeleting" msprop:Generator_RowChangingName="BOOKRowChanging" msprop:Generator_RowEvHandlerName="BOOKRowChangeEventHandler" msprop:Generator_RowDeletedName="BOOKRowDeleted" msprop:Generator_RowClassName="BOOKRow" msprop:Generator_UserTableName="BOOK" msprop:Generator_RowEvArgName="BOOKRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_book" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId_book" msprop:Generator_ColumnPropNameInRow="Id_book" msprop:Generator_ColumnPropNameInTable="Id_bookColumn" msprop:Generator_UserColumnName="Id_book" type="xs:int" />
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Author_Surname" msprop:Generator_ColumnVarNameInTable="columnAuthor_Surname" msprop:Generator_ColumnPropNameInRow="Author_Surname" msprop:Generator_ColumnPropNameInTable="Author_SurnameColumn" msprop:Generator_UserColumnName="Author_Surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Author_Name" msprop:Generator_ColumnVarNameInTable="columnAuthor_Name" msprop:Generator_ColumnPropNameInRow="Author_Name" msprop:Generator_ColumnPropNameInTable="Author_NameColumn" msprop:Generator_UserColumnName="Author_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Author_Patronymic" msprop:Generator_ColumnVarNameInTable="columnAuthor_Patronymic" msprop:Generator_ColumnPropNameInRow="Author_Patronymic" msprop:Generator_ColumnPropNameInTable="Author_PatronymicColumn" msprop:Generator_UserColumnName="Author_Patronymic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:int" minOccurs="0" />
+              <xs:element name="Count_of_book" msprop:Generator_ColumnVarNameInTable="columnCount_of_book" msprop:Generator_ColumnPropNameInRow="Count_of_book" msprop:Generator_ColumnPropNameInTable="Count_of_bookColumn" msprop:Generator_UserColumnName="Count_of_book" type="xs:int" minOccurs="0" />
+              <xs:element name="Genre" msprop:Generator_ColumnVarNameInTable="columnGenre" msprop:Generator_ColumnPropNameInRow="Genre" msprop:Generator_ColumnPropNameInTable="GenreColumn" msprop:Generator_UserColumnName="Genre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Original_language" msprop:Generator_ColumnVarNameInTable="columnOriginal_language" msprop:Generator_ColumnPropNameInRow="Original_language" msprop:Generator_ColumnPropNameInTable="Original_languageColumn" msprop:Generator_UserColumnName="Original_language" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="All_count_book_in_library" msprop:Generator_ColumnVarNameInTable="columnAll_count_book_in_library" msprop:Generator_ColumnPropNameInRow="All_count_book_in_library" msprop:Generator_ColumnPropNameInTable="All_count_book_in_libraryColumn" msprop:Generator_UserColumnName="All_count_book_in_library" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DATE_RETURN_BOOK" msprop:Generator_TableClassName="DATE_RETURN_BOOKDataTable" msprop:Generator_TableVarName="tableDATE_RETURN_BOOK" msprop:Generator_RowChangedName="DATE_RETURN_BOOKRowChanged" msprop:Generator_TablePropName="DATE_RETURN_BOOK" msprop:Generator_RowDeletingName="DATE_RETURN_BOOKRowDeleting" msprop:Generator_RowChangingName="DATE_RETURN_BOOKRowChanging" msprop:Generator_RowEvHandlerName="DATE_RETURN_BOOKRowChangeEventHandler" msprop:Generator_RowDeletedName="DATE_RETURN_BOOKRowDeleted" msprop:Generator_RowClassName="DATE_RETURN_BOOKRow" msprop:Generator_UserTableName="DATE_RETURN_BOOK" msprop:Generator_RowEvArgName="DATE_RETURN_BOOKRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_book" msprop:Generator_ColumnVarNameInTable="columnId_book" msprop:Generator_ColumnPropNameInRow="Id_book" msprop:Generator_ColumnPropNameInTable="Id_bookColumn" msprop:Generator_UserColumnName="Id_book" type="xs:int" />
+              <xs:element name="Id_reader" msprop:Generator_ColumnVarNameInTable="columnId_reader" msprop:Generator_ColumnPropNameInRow="Id_reader" msprop:Generator_ColumnPropNameInTable="Id_readerColumn" msprop:Generator_UserColumnName="Id_reader" type="xs:int" />
+              <xs:element name="Date_start" msprop:Generator_ColumnVarNameInTable="columnDate_start" msprop:Generator_ColumnPropNameInRow="Date_start" msprop:Generator_ColumnPropNameInTable="Date_startColumn" msprop:Generator_UserColumnName="Date_start" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Count_extend_book" msprop:Generator_ColumnVarNameInTable="columnCount_extend_book" msprop:Generator_ColumnPropNameInRow="Count_extend_book" msprop:Generator_ColumnPropNameInTable="Count_extend_bookColumn" msprop:Generator_UserColumnName="Count_extend_book" type="xs:int" minOccurs="0" />
+              <xs:element name="Date_end" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDate_end" msprop:Generator_ColumnPropNameInRow="Date_end" msprop:Generator_ColumnPropNameInTable="Date_endColumn" msprop:Generator_UserColumnName="Date_end" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FORMS_READER" msprop:Generator_TableClassName="FORMS_READERDataTable" msprop:Generator_TableVarName="tableFORMS_READER" msprop:Generator_RowChangedName="FORMS_READERRowChanged" msprop:Generator_TablePropName="FORMS_READER" msprop:Generator_RowDeletingName="FORMS_READERRowDeleting" msprop:Generator_RowChangingName="FORMS_READERRowChanging" msprop:Generator_RowEvHandlerName="FORMS_READERRowChangeEventHandler" msprop:Generator_RowDeletedName="FORMS_READERRowDeleted" msprop:Generator_RowClassName="FORMS_READERRow" msprop:Generator_UserTableName="FORMS_READER" msprop:Generator_RowEvArgName="FORMS_READERRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_reader" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId_reader" msprop:Generator_ColumnPropNameInRow="Id_reader" msprop:Generator_ColumnPropNameInTable="Id_readerColumn" msprop:Generator_UserColumnName="Id_reader" type="xs:int" />
+              <xs:element name="Surname" msprop:Generator_ColumnVarNameInTable="columnSurname" msprop:Generator_ColumnPropNameInRow="Surname" msprop:Generator_ColumnPropNameInTable="SurnameColumn" msprop:Generator_UserColumnName="Surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Patronymic" msprop:Generator_ColumnVarNameInTable="columnPatronymic" msprop:Generator_ColumnPropNameInRow="Patronymic" msprop:Generator_ColumnPropNameInTable="PatronymicColumn" msprop:Generator_UserColumnName="Patronymic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Birthday" msprop:Generator_ColumnVarNameInTable="columnBirthday" msprop:Generator_ColumnPropNameInRow="Birthday" msprop:Generator_ColumnPropNameInTable="BirthdayColumn" msprop:Generator_UserColumnName="Birthday" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Phone" msprop:Generator_ColumnVarNameInTable="columnPhone" msprop:Generator_ColumnPropNameInRow="Phone" msprop:Generator_ColumnPropNameInTable="PhoneColumn" msprop:Generator_UserColumnName="Phone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LOCATION" msprop:Generator_TableClassName="LOCATIONDataTable" msprop:Generator_TableVarName="tableLOCATION" msprop:Generator_RowChangedName="LOCATIONRowChanged" msprop:Generator_TablePropName="LOCATION" msprop:Generator_RowDeletingName="LOCATIONRowDeleting" msprop:Generator_RowChangingName="LOCATIONRowChanging" msprop:Generator_RowEvHandlerName="LOCATIONRowChangeEventHandler" msprop:Generator_RowDeletedName="LOCATIONRowDeleted" msprop:Generator_RowClassName="LOCATIONRow" msprop:Generator_UserTableName="LOCATION" msprop:Generator_RowEvArgName="LOCATIONRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_book" msprop:Generator_ColumnVarNameInTable="columnId_book" msprop:Generator_ColumnPropNameInRow="Id_book" msprop:Generator_ColumnPropNameInTable="Id_bookColumn" msprop:Generator_UserColumnName="Id_book" type="xs:int" />
+              <xs:element name="Number_hall" msprop:Generator_ColumnVarNameInTable="columnNumber_hall" msprop:Generator_ColumnPropNameInRow="Number_hall" msprop:Generator_ColumnPropNameInTable="Number_hallColumn" msprop:Generator_UserColumnName="Number_hall" type="xs:int" minOccurs="0" />
+              <xs:element name="Polka" msprop:Generator_ColumnVarNameInTable="columnPolka" msprop:Generator_ColumnPropNameInRow="Polka" msprop:Generator_ColumnPropNameInTable="PolkaColumn" msprop:Generator_UserColumnName="Polka" type="xs:int" minOccurs="0" />
+              <xs:element name="Stend" msprop:Generator_ColumnVarNameInTable="columnStend" msprop:Generator_ColumnPropNameInRow="Stend" msprop:Generator_ColumnPropNameInTable="StendColumn" msprop:Generator_UserColumnName="Stend" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="USERS" msprop:Generator_TableClassName="USERSDataTable" msprop:Generator_TableVarName="tableUSERS" msprop:Generator_RowChangedName="USERSRowChanged" msprop:Generator_TablePropName="USERS" msprop:Generator_RowDeletingName="USERSRowDeleting" msprop:Generator_RowChangingName="USERSRowChanging" msprop:Generator_RowEvHandlerName="USERSRowChangeEventHandler" msprop:Generator_RowDeletedName="USERSRowDeleted" msprop:Generator_RowClassName="USERSRow" msprop:Generator_UserTableName="USERS" msprop:Generator_RowEvArgName="USERSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RIGHTS" msprop:Generator_ColumnVarNameInTable="columnRIGHTS" msprop:Generator_ColumnPropNameInRow="RIGHTS" msprop:Generator_ColumnPropNameInTable="RIGHTSColumn" msprop:Generator_UserColumnName="RIGHTS" type="xs:int" minOccurs="0" />
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PASSWORD" msprop:Generator_ColumnVarNameInTable="columnPASSWORD" msprop:Generator_ColumnPropNameInRow="PASSWORD" msprop:Generator_ColumnPropNameInTable="PASSWORDColumn" msprop:Generator_UserColumnName="PASSWORD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID_READER_USER" msprop:Generator_ColumnVarNameInTable="columnID_READER_USER" msprop:Generator_ColumnPropNameInRow="ID_READER_USER" msprop:Generator_ColumnPropNameInTable="ID_READER_USERColumn" msprop:Generator_UserColumnName="ID_READER_USER" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Function_of_SUMM_OF_DEBT_ONE_BOOK_TABLE" msprop:Generator_TableClassName="Function_of_SUMM_OF_DEBT_ONE_BOOK_TABLEDataTable" msprop:Generator_TableVarName="tableFunction_of_SUMM_OF_DEBT_ONE_BOOK_TABLE" msprop:Generator_TablePropName="Function_of_SUMM_OF_DEBT_ONE_BOOK_TABLE" msprop:Generator_RowDeletingName="Function_of_SUMM_OF_DEBT_ONE_BOOK_TABLERowDeleting" msprop:Generator_RowChangingName="Function_of_SUMM_OF_DEBT_ONE_BOOK_TABLERowChanging" msprop:Generator_RowEvHandlerName="Function_of_SUMM_OF_DEBT_ONE_BOOK_TABLERowChangeEventHandler" msprop:Generator_RowDeletedName="Function_of_SUMM_OF_DEBT_ONE_BOOK_TABLERowDeleted" msprop:Generator_UserTableName="Function_of_SUMM_OF_DEBT_ONE_BOOK_TABLE" msprop:Generator_RowChangedName="Function_of_SUMM_OF_DEBT_ONE_BOOK_TABLERowChanged" msprop:Generator_RowEvArgName="Function_of_SUMM_OF_DEBT_ONE_BOOK_TABLERowChangeEvent" msprop:Generator_RowClassName="Function_of_SUMM_OF_DEBT_ONE_BOOK_TABLERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Author_Surname" msprop:Generator_ColumnVarNameInTable="columnAuthor_Surname" msprop:Generator_ColumnPropNameInRow="Author_Surname" msprop:Generator_ColumnPropNameInTable="Author_SurnameColumn" msprop:Generator_UserColumnName="Author_Surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Author_Name" msprop:Generator_ColumnVarNameInTable="columnAuthor_Name" msprop:Generator_ColumnPropNameInRow="Author_Name" msprop:Generator_ColumnPropNameInTable="Author_NameColumn" msprop:Generator_UserColumnName="Author_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TITLE" msprop:Generator_ColumnVarNameInTable="columnTITLE" msprop:Generator_ColumnPropNameInRow="TITLE" msprop:Generator_ColumnPropNameInTable="TITLEColumn" msprop:Generator_UserColumnName="TITLE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SUMM" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSUMM" msprop:Generator_ColumnPropNameInRow="SUMM" msprop:Generator_ColumnPropNameInTable="SUMMColumn" msprop:Generator_UserColumnName="SUMM" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EXTEND" msprop:Generator_TableClassName="EXTENDDataTable" msprop:Generator_TableVarName="tableEXTEND" msprop:Generator_TablePropName="EXTEND" msprop:Generator_RowDeletingName="EXTENDRowDeleting" msprop:Generator_RowChangingName="EXTENDRowChanging" msprop:Generator_RowEvHandlerName="EXTENDRowChangeEventHandler" msprop:Generator_RowDeletedName="EXTENDRowDeleted" msprop:Generator_UserTableName="EXTEND" msprop:Generator_RowChangedName="EXTENDRowChanged" msprop:Generator_RowEvArgName="EXTENDRowChangeEvent" msprop:Generator_RowClassName="EXTENDRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_book" msprop:Generator_ColumnVarNameInTable="columnId_book" msprop:Generator_ColumnPropNameInRow="Id_book" msprop:Generator_ColumnPropNameInTable="Id_bookColumn" msprop:Generator_UserColumnName="Id_book" type="xs:int" minOccurs="0" />
+              <xs:element name="Id_reader" msprop:Generator_ColumnVarNameInTable="columnId_reader" msprop:Generator_ColumnPropNameInRow="Id_reader" msprop:Generator_ColumnPropNameInTable="Id_readerColumn" msprop:Generator_UserColumnName="Id_reader" type="xs:int" minOccurs="0" />
+              <xs:element name="Date_start" msprop:Generator_ColumnVarNameInTable="columnDate_start" msprop:Generator_ColumnPropNameInRow="Date_start" msprop:Generator_ColumnPropNameInTable="Date_startColumn" msprop:Generator_UserColumnName="Date_start" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Date_end" msprop:Generator_ColumnVarNameInTable="columnDate_end" msprop:Generator_ColumnPropNameInRow="Date_end" msprop:Generator_ColumnPropNameInTable="Date_endColumn" msprop:Generator_UserColumnName="Date_end" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Count_extend_ex" msprop:Generator_ColumnVarNameInTable="columnCount_extend_ex" msprop:Generator_ColumnPropNameInRow="Count_extend_ex" msprop:Generator_ColumnPropNameInTable="Count_extend_exColumn" msprop:Generator_UserColumnName="Count_extend_ex" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TABLE_DATE_RETURN_BOOK" msprop:Generator_TableClassName="TABLE_DATE_RETURN_BOOKDataTable" msprop:Generator_TableVarName="tableTABLE_DATE_RETURN_BOOK" msprop:Generator_RowChangedName="TABLE_DATE_RETURN_BOOKRowChanged" msprop:Generator_TablePropName="TABLE_DATE_RETURN_BOOK" msprop:Generator_RowDeletingName="TABLE_DATE_RETURN_BOOKRowDeleting" msprop:Generator_RowChangingName="TABLE_DATE_RETURN_BOOKRowChanging" msprop:Generator_RowEvHandlerName="TABLE_DATE_RETURN_BOOKRowChangeEventHandler" msprop:Generator_RowDeletedName="TABLE_DATE_RETURN_BOOKRowDeleted" msprop:Generator_RowClassName="TABLE_DATE_RETURN_BOOKRow" msprop:Generator_UserTableName="TABLE_DATE_RETURN_BOOK" msprop:Generator_RowEvArgName="TABLE_DATE_RETURN_BOOKRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_BOOK" msprop:Generator_ColumnVarNameInTable="columnID_BOOK" msprop:Generator_ColumnPropNameInRow="ID_BOOK" msprop:Generator_ColumnPropNameInTable="ID_BOOKColumn" msprop:Generator_UserColumnName="ID_BOOK" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_READER" msprop:Generator_ColumnVarNameInTable="columnID_READER" msprop:Generator_ColumnPropNameInRow="ID_READER" msprop:Generator_ColumnPropNameInTable="ID_READERColumn" msprop:Generator_UserColumnName="ID_READER" type="xs:int" minOccurs="0" />
+              <xs:element name="DATE_START" msprop:Generator_ColumnVarNameInTable="columnDATE_START" msprop:Generator_ColumnPropNameInRow="DATE_START" msprop:Generator_ColumnPropNameInTable="DATE_STARTColumn" msprop:Generator_UserColumnName="DATE_START" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DATE_END" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDATE_END" msprop:Generator_ColumnPropNameInRow="DATE_END" msprop:Generator_ColumnPropNameInTable="DATE_ENDColumn" msprop:Generator_UserColumnName="DATE_END" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="COUNT_OF_EX" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCOUNT_OF_EX" msprop:Generator_ColumnPropNameInRow="COUNT_OF_EX" msprop:Generator_ColumnPropNameInTable="COUNT_OF_EXColumn" msprop:Generator_UserColumnName="COUNT_OF_EX" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Activity_Reader" />
+      <xs:field xpath="mstns:Id_reader" />
+    </xs:unique>
+    <xs:unique name="Debt_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Debt" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="GENRE__OF_BOOK_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GENRE__OF_BOOK" />
+      <xs:field xpath="mstns:Id_book" />
+    </xs:unique>
+    <xs:unique name="ORIGINAL_LANGUAGE__OF_BOOK_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ORIGINAL_LANGUAGE__OF_BOOK" />
+      <xs:field xpath="mstns:Id_book" />
+    </xs:unique>
+    <xs:unique name="BLOCKS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BLOCKS" />
+      <xs:field xpath="mstns:Id_reader" />
+    </xs:unique>
+    <xs:unique name="BOOK_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BOOK" />
+      <xs:field xpath="mstns:Id_book" />
+    </xs:unique>
+    <xs:unique name="DATE_RETURN_BOOK_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DATE_RETURN_BOOK" />
+      <xs:field xpath="mstns:Id_book" />
+      <xs:field xpath="mstns:Id_reader" />
+    </xs:unique>
+    <xs:unique name="FORMS_READER_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:FORMS_READER" />
+      <xs:field xpath="mstns:Id_reader" />
+    </xs:unique>
+    <xs:unique name="LOCATION_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LOCATION" />
+      <xs:field xpath="mstns:Id_book" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK__BLOCKS__Id_reade__403A8C7D" msdata:parent="FORMS_READER" msdata:child="BLOCKS" msdata:parentkey="Id_reader" msdata:childkey="Id_reader" msprop:Generator_UserChildTable="BLOCKS" msprop:Generator_ChildPropName="GetBLOCKSRows" msprop:Generator_UserRelationName="FK__BLOCKS__Id_reade__403A8C7D" msprop:Generator_ParentPropName="FORMS_READERRow" msprop:Generator_RelationVarName="relationFK__BLOCKS__Id_reade__403A8C7D" msprop:Generator_UserParentTable="FORMS_READER" />
+      <msdata:Relationship name="FK__DATE_RETU__Id_bo__17F790F9" msdata:parent="BOOK" msdata:child="DATE_RETURN_BOOK" msdata:parentkey="Id_book" msdata:childkey="Id_book" msprop:Generator_UserChildTable="DATE_RETURN_BOOK" msprop:Generator_ChildPropName="GetDATE_RETURN_BOOKRows" msprop:Generator_UserRelationName="FK__DATE_RETU__Id_bo__17F790F9" msprop:Generator_RelationVarName="relationFK__DATE_RETU__Id_bo__17F790F9" msprop:Generator_UserParentTable="BOOK" msprop:Generator_ParentPropName="BOOKRow" />
+      <msdata:Relationship name="FK__DATE_RETU__Id_re__18EBB532" msdata:parent="FORMS_READER" msdata:child="DATE_RETURN_BOOK" msdata:parentkey="Id_reader" msdata:childkey="Id_reader" msprop:Generator_UserChildTable="DATE_RETURN_BOOK" msprop:Generator_ChildPropName="GetDATE_RETURN_BOOKRows" msprop:Generator_UserRelationName="FK__DATE_RETU__Id_re__18EBB532" msprop:Generator_ParentPropName="FORMS_READERRow" msprop:Generator_RelationVarName="relationFK__DATE_RETU__Id_re__18EBB532" msprop:Generator_UserParentTable="FORMS_READER" />
+      <msdata:Relationship name="FK__LOCATION__Id_boo__44FF419A" msdata:parent="BOOK" msdata:child="LOCATION" msdata:parentkey="Id_book" msdata:childkey="Id_book" msprop:Generator_UserChildTable="LOCATION" msprop:Generator_ChildPropName="GetLOCATIONRows" msprop:Generator_UserRelationName="FK__LOCATION__Id_boo__44FF419A" msprop:Generator_RelationVarName="relationFK__LOCATION__Id_boo__44FF419A" msprop:Generator_UserParentTable="BOOK" msprop:Generator_ParentPropName="BOOKRow" />
+      <msdata:Relationship name="FK_USER" msdata:parent="FORMS_READER" msdata:child="USERS" msdata:parentkey="Id_reader" msdata:childkey="ID_READER_USER" msprop:Generator_UserChildTable="USERS" msprop:Generator_ChildPropName="GetUSERSRows" msprop:Generator_UserRelationName="FK_USER" msprop:Generator_RelationVarName="relationFK_USER" msprop:Generator_UserParentTable="FORMS_READER" msprop:Generator_ParentPropName="FORMS_READERRow" />
+      <msdata:Relationship name="FK__EXTEND__Id_book__3D2915A8" msdata:parent="BOOK" msdata:child="EXTEND" msdata:parentkey="Id_book" msdata:childkey="Id_book" msprop:Generator_UserChildTable="EXTEND" msprop:Generator_ChildPropName="GetEXTENDRows" msprop:Generator_UserRelationName="FK__EXTEND__Id_book__3D2915A8" msprop:Generator_ParentPropName="BOOKRow" msprop:Generator_RelationVarName="relationFK__EXTEND__Id_book__3D2915A8" msprop:Generator_UserParentTable="BOOK" />
+      <msdata:Relationship name="FK__EXTEND__Id_reade__3E1D39E1" msdata:parent="FORMS_READER" msdata:child="EXTEND" msdata:parentkey="Id_reader" msdata:childkey="Id_reader" msprop:Generator_UserChildTable="EXTEND" msprop:Generator_ChildPropName="GetEXTENDRows" msprop:Generator_UserRelationName="FK__EXTEND__Id_reade__3E1D39E1" msprop:Generator_ParentPropName="FORMS_READERRow" msprop:Generator_RelationVarName="relationFK__EXTEND__Id_reade__3E1D39E1" msprop:Generator_UserParentTable="FORMS_READER" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
